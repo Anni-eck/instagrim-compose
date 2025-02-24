@@ -1,0 +1,10 @@
+services:
+  database:
+    image: alvildaaa/instagrimdb
+    hostname: database
+  webapp:
+    image: alvildaaa/instagrimapp
+    restart: on-failure
+    hostname: instagrim
+    ports:
+      - '8080:8080'

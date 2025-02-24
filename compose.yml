@@ -2,19 +2,10 @@ services:
   database:
     image: alvildaaa/instagrimdb
     hostname: database
-    networks:
-      - mooinetwerk
 
   webapp:
     image: alvildaaa/instagrimapp
     restart: on-failure
     hostname: instagrim
-    networks:
-      - mooinetwerk
     ports:
       - '8080:8080'
-
-networks:
-  mooinetwerk:
-    internal: true
-    driver: bridge
